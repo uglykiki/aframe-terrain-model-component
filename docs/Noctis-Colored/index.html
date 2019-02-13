@@ -2,25 +2,16 @@
   <head>
     <title>A-Frame Terrain Model Component - Noctis Colored</title>
     <script src="../build.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/tizzle/aframe-orbit-controls-component@v0.1.9/dist/aframe-orbit-controls-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
   </head>
   <body>
-    <a-scene antialias="true">
+    <a-scene renderer="antialias: true">
 
       <!-- Orbit cam -->
       <a-entity
           id="camera"
           camera
-          position="0 80 -350"
-          orbit-controls="
-              autoRotate: false;
-              target: #terrain;
-              enableDamping: true;
-              dampingFactor: 0.125;
-              rotateSpeed:0.25;
-              minDistance:300;
-              maxDistance:1000;
-              ">
+          orbit-controls="target: 0 0 0; minDistance: 300; maxDistance: 1000; initialPosition: 0 20 -40"
       </a-entity>
 
       <!-- Terrain-->
@@ -30,7 +21,7 @@
                                        planeHeight: 346;
                                        segmentsWidth: 199;
                                        segmentsHeight: 199;
-                                       zPosition: 200;
+                                       zPosition: 100;
                                        wireframe: true">
       </a-entity>
 
